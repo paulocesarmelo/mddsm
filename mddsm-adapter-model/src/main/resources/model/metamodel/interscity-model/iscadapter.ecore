@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iscadapter" nsURI="http://www.inf.ufg.br/adapter/iscadapter"
+    nsPrefix="iscadapter">
+  <eClassifiers xsi:type="ecore:EClass" name="InterScityAdapter" eSuperTypes="adapter.ecore#//EAdapter"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ISCComm" eSuperTypes="adapter.ecore#//ECommunication"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ISCResource" eSuperTypes="adapter.ecore#//EResource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uuid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uri" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="arrange" eType="#//resources/ArrangementType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="composition" eType="#//resources/CompositionType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//resources/ResourceProperty" transient="true" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
+        eType="#//resources/Capability" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="long" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="DSEntity" eType="ecore:EClass adapter.ecore#//EEntity"/>
+  </eClassifiers>
+  <eSubpackages name="components" nsURI="http://www.inf.ufg.br/adapter/isc-adapter/components"
+      nsPrefix="components">
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceDiscovery" eSuperTypes="adapter.ecore#//EComponent">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="route" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" defaultValueLiteral="discovery"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="DataCollector" eSuperTypes="adapter.ecore#//EComponent">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="route" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" defaultValueLiteral="datacollector"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ActuatorController" eSuperTypes="adapter.ecore#//EComponent">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="route" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          changeable="false" defaultValueLiteral="actuatorcontroller"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="resources" nsURI="http://www.inf.ufg.br/adapter/isc-adapter/resources"
+      nsPrefix="resources">
+    <eClassifiers xsi:type="ecore:EClass" name="CompositeResource" eSuperTypes="#//ISCResource">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+          upperBound="-1" eType="#//ISCResource" transient="true" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Sensor"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Actuator"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceProperty">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="attr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Capability">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="function" eType="#//resources/ResourceType"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="dsc" lowerBound="1" upperBound="-1"
+          eType="ecore:EClass ../../../../../../../mddsm-controller-model/src/main/resources/model/metamodel/dsk.ecore#//EDSC"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Location">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="lat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="long" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="CompositionType">
+      <eLiterals name="SINGLE"/>
+      <eLiterals name="COMPOSITE" value="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ArrangementType">
+      <eLiterals name="PHISICAL"/>
+      <eLiterals name="LOGICAL" value="1"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="ResourceType">
+      <eLiterals name="SENSOR"/>
+      <eLiterals name="ACTUATOR" value="1"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

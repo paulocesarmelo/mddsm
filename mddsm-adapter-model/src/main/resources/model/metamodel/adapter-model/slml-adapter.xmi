@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<iscadapter:InterScityAdapter
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:components="http://www.inf.ufg.br/adapter/isc-adapter/components"
+    xmlns:iscadapter="http://www.inf.ufg.br/adapter/iscadapter"
+    name="test">
+    <comm xsi:type="iscadapter:ISCComm">
+    <target
+        xsi:type="components:ResourceDiscovery"
+        name=""/>
+  </comm>
+  <comm xsi:type="iscadapter:ISCComm"
+      api="GRAPHQL"
+      dataSupported="XML">
+    <target
+        xsi:type="components:DataCollector"/>
+  </comm>
+  <resources
+      xsi:type="iscadapter:ISCResource"
+      name="lamp">
+    <capabilities
+        name="iluminate"
+        function="ACTUATOR"/>
+  </resources>
+  <resources
+      xsi:type="iscadapter:ISCResource"
+      name="camera">
+    <capabilities
+        name="video"/>
+  </resources>
+</iscadapter:InterScityAdapter>

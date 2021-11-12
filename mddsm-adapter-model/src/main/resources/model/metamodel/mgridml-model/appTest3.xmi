@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mgridml:MGridSchema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mgridml="http://www.inf.ufg.br/m4md/mgridml" mgridModelID="mgrid1">
+  <cs xsi:type="mgridml:MGridControlSchema">
+    <actor xsi:type="mgridml:LoadController" controllerID="lc1" name="LoadController1" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0">
+      <loadDeviceType soTypeID="ldt1" typeName="SeasonalDevice1"/>
+    </actor>
+  </cs>
+  <ds xsi:type="mgridml:MGridDataSchema" cs="//@cs">
+    <item xsi:type="mgridml:LoadDevice" type="//@cs/@actor.0/@loadDeviceType.0" plantE_ID="ld1" deviceName="Heater1" wattage="120.0"/>
+  </ds>
+</mgridml:MGridSchema>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="ASCII"?>
+<iscadapter:InterScityAdapter
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:iscadapter="http://www.inf.ufg.br/adapter/iscadapter">
+  <resources
+      xsi:type="iscadapter:ISCResource"
+      name="resource#1">
+    <resourceKind>SENSOR</resourceKind>
+    <resourceKind>ACTUATOR</resourceKind>
+    <capabilities
+        name="cap1"
+        description="description about cap1"/>
+  </resources>
+  <resources
+      xsi:type="iscadapter:ISCResource"
+      name="resource#2"/>
+</iscadapter:InterScityAdapter>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dsk:Dsk xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:dsk="http://www.inf.ufg.br/controller/dsk"
+    domain="mgrid">
+  <dscs name="DSC1"
+      kind="OPER"
+      entity="//@entities.11"
+      condition="//@events.0"/>
+  <dscs name="DSC2"
+      kind="OPER"
+      entity="//@entities.8"
+      condition="//@events.1"/>
+  <dscs name="DSC3"
+      kind="OPER"
+      entity="//@entities.8"
+      condition="//@events.2"/>
+  <dscs name="DSC4"
+      kind="OPER"
+      entity="//@entities.8"
+      condition="//@events.3"/>
+  <dscs name="DSCTest"
+      kind="OPER"
+      entity="//@entities.12"
+      condition="//@events.4"/>
+  <procedures
+      id="01"
+      name="Procedure1"
+      classifier="//@dscs.0">
+    <impl id="eu1"
+        body="return true;"/>
+  </procedures>
+  <procedures
+      id="test"
+      name="ProceudreTest1"
+      classifier="//@dscs.4">
+    <impl id="euTest1"
+        body="return false;"/>
+  </procedures>
+  <procedures
+      id="test"
+      name="ProceudreTest2"
+      classifier="//@dscs.4">
+    <impl id="euTest2"
+        body="return false;"/>
+  </procedures>
+  <procedures
+      id="test"
+      name="ProceudreTest3"
+      classifier="//@dscs.4">
+    <impl id="euTest3"
+        body="return false;"/>
+  </procedures>
+  <procedures
+      id="test"
+      name="ProceudreTest4"
+      classifier="//@dscs.4">
+    <impl id="euTest4"
+        body="return false;"/>
+  </procedures>
+  <procedures
+      id="test"
+      name="ProceudreTest5"
+      classifier="//@dscs.4">
+    <impl id="euTest5"
+        body="return false;"/>
+  </procedures>
+  <procedures
+      id="test"
+      name="ProceudreTest6"
+      classifier="//@dscs.4">
+    <impl id="euTest6"
+        body="return false;"/>
+  </procedures>
+  <procedures
+      id="test"
+      name="ProceudreTest7"
+      classifier="//@dscs.4">
+    <impl id="euTest7"
+        body="return false;"/>
+  </procedures>
+  <procedures
+      id="test"
+      name="ProceudreTest8"
+      classifier="//@dscs.4">
+    <impl id="euTest8"
+        body="return false;"/>
+  </procedures>
+  <procedures
+      id="test"
+      name="ProceudreTest9"
+      classifier="//@dscs.4">
+    <impl id="euTest9"
+        body="return false;"/>
+  </procedures>
+  <events id="ev001"
+      name="Event1"
+      metaCmd="ADD"/>
+  <events id="ev002"
+      name="Event2"
+      metaCmd="ADD"/>
+  <events id="ev003"
+      name="Event3"
+      metaCmd="ADD"/>
+  <events id="ev004"
+      name="Event4"
+      metaCmd="ADD"/>
+  <events id="evTeste"
+      name="EventTest"/>
+  <entities
+      name="PlantElem"/>
+  <entities
+      name="Device"/>
+  <entities
+      name="LoadDevice"/>
+  <entities
+      name="StorageDevice"/>
+  <entities
+      name="Source"/>
+  <entities
+      name="SmartMeter"/>
+  <entities
+      name="Meter"/>
+  <entities
+      name="LegacyMeter"/>
+  <entities
+      name="MGController"/>
+  <entities
+      name="AtomicController"/>
+  <entities
+      name="MGridController"/>
+  <entities
+      name="LoadController"/>
+  <entities
+      name="StorageController"/>
+  <entities
+      name="SourceController"/>
+  <entities
+      name="PCC"/>
+</dsk:Dsk>

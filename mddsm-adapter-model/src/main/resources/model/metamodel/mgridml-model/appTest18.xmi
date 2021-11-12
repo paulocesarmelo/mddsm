@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mgridml:MGridSchema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mgridml="http://www.inf.ufg.br/m4md/mgridml" mgridModelID="mgrid1">
+  <cs xsi:type="mgridml:MGridControlSchema">
+    <actor xsi:type="mgridml:LoadController" controllerID="lc1" name="LoadController1" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0">
+      <loadDeviceType soTypeID="ldt1" typeName="SeasonalDevice1"/>
+    </actor>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc2" name="LoadController2" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0">
+      <loadDeviceType soTypeID="ldt2" typeName="SeasonalDevice2"/>
+    </actor>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc3" name="LoadController3" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0">
+      <loadDeviceType soTypeID="ldt3" typeName="SeasonalDevice3"/>
+    </actor>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc4" name="LoadController4" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0">
+      <loadDeviceType soTypeID="ldt4" typeName="SeasonalDevice4"/>
+    </actor>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc5" name="LoadController5" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0">
+      <loadDeviceType soTypeID="ldt5" typeName="SeasonalDevice5"/>
+    </actor>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc6" name="LoadController6" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0">
+      <loadDeviceType soTypeID="ldt6" typeName="SeasonalDevice6"/>
+    </actor>
+  </cs>
+  <ds xsi:type="mgridml:MGridDataSchema" cs="//@cs">
+    <item xsi:type="mgridml:LoadDevice" type="//@cs/@actor.0/@loadDeviceType.0" plantE_ID="ld1" deviceName="Heater1" wattage="120.0"/>
+    <item xsi:type="mgridml:LoadDevice" type="//@cs/@actor.1/@loadDeviceType.0" plantE_ID="ld2" deviceName="Heater2" wattage="120.0"/>
+    <item xsi:type="mgridml:LoadDevice" type="//@cs/@actor.2/@loadDeviceType.0" plantE_ID="ld3" deviceName="Heater3" wattage="120.0"/>
+    <item xsi:type="mgridml:LoadDevice" type="//@cs/@actor.3/@loadDeviceType.0" plantE_ID="ld4" deviceName="Heater4" wattage="120.0"/>
+    <item xsi:type="mgridml:LoadDevice" type="//@cs/@actor.4/@loadDeviceType.0" plantE_ID="ld5" deviceName="Heater5" wattage="120.0"/>
+    <item xsi:type="mgridml:LoadDevice" type="//@cs/@actor.5/@loadDeviceType.0" plantE_ID="ld6" deviceName="Heater6" wattage="120.0"/>
+  </ds>
+</mgridml:MGridSchema>

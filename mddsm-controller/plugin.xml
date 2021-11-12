@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated base -->
+      <package
+            uri="http://www.inf.ufg.br/controller/base"
+            class="br.inf.ufg.mddsm.controller.base.BasePackage"
+            genModel="src-old/test/resources/base.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated base -->
+      <package
+            uri="http://www.inf.ufg.br/mestrado/controller/base/context"
+            class="br.inf.ufg.mddsm.controller.base.context.ContextPackage"
+            genModel="src-old/test/resources/base.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated base -->
+      <package
+            uri="http://www.inf.ufg.br/mestrado/controller/base/metadata"
+            class="br.inf.ufg.mddsm.controller.base.metadata.MetadataPackage"
+            genModel="src-old/test/resources/base.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated base -->
+      <package
+            uri="http://www.inf.ufg.br/mestrado/controller/base/policy"
+            class="br.inf.ufg.mddsm.controller.base.policy.PolicyPackage"
+            genModel="src-old/test/resources/base.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated base -->
+      <package
+            uri="http://www.inf.ufg.br/mestrado/controller/base/common"
+            class="br.inf.ufg.mddsm.controller.base.common.CommonPackage"
+            genModel="src-old/test/resources/base.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated base -->
+      <package
+            uri="http://www.inf.ufg.br/mestrado/controller/base/script"
+            class="br.inf.ufg.mddsm.controller.base.script.ScriptPackage"
+            genModel="src-old/test/resources/base.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated base -->
+      <package
+            uri="http://www.inf.ufg.br/mestrado/controller/base/img"
+            class="br.inf.ufg.mddsm.controller.base.img.ImgPackage"
+            genModel="src-old/test/resources/base.genmodel"/>
+   </extension>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dsk -->
+      <package
+            uri="http://www.inf.ufg.br/controller/dsk"
+            class="dsk.DskPackage"
+            genModel="resource/metamodel/dsk.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated dsk -->
+      <package
+            uri="http://www.inf.ufg.br/controller/dsk/common"
+            class="dsk.common.CommonPackage"
+            genModel="resource/metamodel/dsk.genmodel"/>
+   </extension>
+</plugin>

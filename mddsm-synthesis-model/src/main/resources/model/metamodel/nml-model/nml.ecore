@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="nml" nsURI="www.inf.ufg.br/m4md/nml" nsPrefix="nml">
+  <eClassifiers xsi:type="ecore:EClass" name="NMLSchema" eSuperTypes="m4md.ecore#//EDomainSchema"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NMLControlSchema" eSuperTypes="m4md.ecore#//EControlSchema"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NMLDataSchema" eSuperTypes="m4md.ecore#//EDataSchema"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ActorX" eSuperTypes="m4md.ecore#//EActor">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="typeX" eType="#//XType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="XType" eSuperTypes="m4md.ecore#//EDomainSpecificType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ItemX" eSuperTypes="m4md.ecore#//EItem"/>
+</ecore:EPackage>

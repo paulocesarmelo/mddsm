@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+	xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+	modelDirectory="/mddsm-synthesis-model/src"
+	modelPluginID="mddsm-synthesis-model" modelName="Testing2"
+	rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+	importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+	copyrightFields="false" operationReflection="true"
+	importOrganizing="true">
+	<foreignModel>testing2.ecore</foreignModel>
+	<genPackages prefix="Testing2"
+		disposableProviderFactory="true" ecorePackage="testing2.ecore#/">
+		<genEnums typeSafeEnumCompatible="false"
+			ecoreEnum="testing2.ecore#//CmdType">
+			<genEnumLiterals
+				ecoreEnumLiteral="testing2.ecore#//CmdType/startDevice" />
+			<genEnumLiterals
+				ecoreEnumLiteral="testing2.ecore#//CmdType/stopDevice" />
+			<genEnumLiterals
+				ecoreEnumLiteral="testing2.ecore#//CmdType/verifyStatus" />
+			<genEnumLiterals
+				ecoreEnumLiteral="testing2.ecore#//CmdType/testDevice" />
+			<genEnumLiterals
+				ecoreEnumLiteral="testing2.ecore#//CmdType/setWaitMode" />
+		</genEnums>
+		<genClasses ecoreClass="testing2.ecore#//TestingSchema">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute testing2.ecore#//TestingSchema/id" />
+		</genClasses>
+		<genClasses ecoreClass="testing2.ecore#//TestingCS">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute testing2.ecore#//TestingCS/csId" />
+		</genClasses>
+		<genClasses ecoreClass="testing2.ecore#//TestingDS">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute testing2.ecore#//TestingDS/dsId" />
+		</genClasses>
+		<genClasses ecoreClass="testing2.ecore#//ClassType">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute testing2.ecore#//ClassType/typeName" />
+		</genClasses>
+		<genClasses ecoreClass="testing2.ecore#//ClassItem">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute testing2.ecore#//ClassItem/name" />
+		</genClasses>
+		<genClasses ecoreClass="testing2.ecore#//ClassActor">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute testing2.ecore#//ClassActor/name" />
+		</genClasses>
+		<genClasses ecoreClass="testing2.ecore#//ClassCommand">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute testing2.ecore#//ClassCommand/cmd" />
+		</genClasses>
+	</genPackages>
+	<genPackages prefix="M4md" disposableProviderFactory="true"
+		ecorePackage="m4md.ecore#/">
+		<genEnums typeSafeEnumCompatible="false"
+			ecoreEnum="m4md.ecore#//EArising">
+			<genEnumLiterals
+				ecoreEnumLiteral="m4md.ecore#//EArising/STATIC" />
+			<genEnumLiterals
+				ecoreEnumLiteral="m4md.ecore#//EArising/DYNAMIC" />
+		</genEnums>
+		<genEnums typeSafeEnumCompatible="false"
+			ecoreEnum="m4md.ecore#//ECardinality">
+			<genEnumLiterals
+				ecoreEnumLiteral="m4md.ecore#//ECardinality/ONE" />
+			<genEnumLiterals
+				ecoreEnumLiteral="m4md.ecore#//ECardinality/MANY" />
+		</genEnums>
+		<genEnums typeSafeEnumCompatible="false"
+			ecoreEnum="m4md.ecore#//EInteractionBehavior">
+			<genEnumLiterals
+				ecoreEnumLiteral="m4md.ecore#//EInteractionBehavior/SYNC" />
+			<genEnumLiterals
+				ecoreEnumLiteral="m4md.ecore#//EInteractionBehavior/ASYNC" />
+		</genEnums>
+		<genEnums typeSafeEnumCompatible="false"
+			ecoreEnum="m4md.ecore#//ECoordinationBehavior">
+			<genEnumLiterals
+				ecoreEnumLiteral="m4md.ecore#//ECoordinationBehavior/LOCAL" />
+			<genEnumLiterals
+				ecoreEnumLiteral="m4md.ecore#//ECoordinationBehavior/DISTRIBUTED" />
+		</genEnums>
+		<genClasses ecoreClass="m4md.ecore#//EDomainSchema">
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference m4md.ecore#//EDomainSchema/cs" />
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference m4md.ecore#//EDomainSchema/ds" />
+		</genClasses>
+		<genClasses image="false"
+			ecoreClass="m4md.ecore#//EControlSchema">
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference m4md.ecore#//EControlSchema/actor" />
+		</genClasses>
+		<genClasses image="false"
+			ecoreClass="m4md.ecore#//EDataSchema">
+			<genFeatures notify="false" createChild="false"
+				propertySortChoices="true"
+				ecoreFeature="ecore:EReference m4md.ecore#//EDataSchema/cs" />
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference m4md.ecore#//EDataSchema/item" />
+		</genClasses>
+		<genClasses image="false"
+			ecoreClass="m4md.ecore#//EDomainSpecificEntity">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute m4md.ecore#//EDomainSpecificEntity/commandPriority" />
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference m4md.ecore#//EDomainSpecificEntity/cmd" />
+		</genClasses>
+		<genClasses image="false"
+			ecoreClass="m4md.ecore#//EDomainSpecificCommand">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute m4md.ecore#//EDomainSpecificCommand/cmdId" />
+		</genClasses>
+		<genClasses image="false" ecoreClass="m4md.ecore#//EActor">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute m4md.ecore#//EActor/kindInteraction" />
+			<genFeatures property="None" children="true"
+				createChild="true"
+				ecoreFeature="ecore:EReference m4md.ecore#//EActor/typesControlled" />
+		</genClasses>
+		<genClasses image="false" ecoreClass="m4md.ecore#//EItem">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute m4md.ecore#//EItem/arisingBehavior" />
+			<genFeatures notify="false" createChild="false"
+				propertySortChoices="true"
+				ecoreFeature="ecore:EReference m4md.ecore#//EItem/type" />
+		</genClasses>
+		<genClasses image="false"
+			ecoreClass="m4md.ecore#//EDomainSpecificType">
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute m4md.ecore#//EDomainSpecificType/interactionBehavior" />
+			<genFeatures createChild="false"
+				ecoreFeature="ecore:EAttribute m4md.ecore#//EDomainSpecificType/cardinality" />
+		</genClasses>
+	</genPackages>
+</genmodel:GenModel>

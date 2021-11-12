@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<iscadapter:InterScityAdapter
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:iscadapter="http://www.inf.ufg.br/adapter/iscadapter"
+    name="mgrid">
+  <resources
+      xsi:type="iscadapter:ISCResource"
+      name="Heater"
+      DSEntity="//@entity.3"/>
+  <dscs name="DSC1"
+      kind="OPER"
+      entity="//@entity.0"/>
+  <entity name="LoadController"/>
+  <entity name="AtomicController"/>
+  <entity name="Meter"/>
+  <entity name="Device"/>
+  <entity name="LegacyMeter"/>
+  <entity name="SmartMeter"/>
+  <entity name="StorageController"/>
+  <entity name="PlantElem"/>
+  <entity name="Source"/>
+  <entity name="PCC"/>
+  <entity name="MGridController"/>
+  <entity name="StorageDevice"/>
+  <entity name="LoadDevice"/>
+  <entity name="SourceController"/>
+  <entity name="MGController"/>
+</iscadapter:InterScityAdapter>

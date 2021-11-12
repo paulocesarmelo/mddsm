@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dsk:Dsk xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:dsk="http://www.inf.ufg.br/controller/dsk"
+    domain="mgrid">
+  <dscs name="DSC1"
+      kind="OPER"
+      entity="//@entities.11"
+      condition="//@events.0"/>
+  <procedures
+      id="01"
+      name="Proceudre1"
+      classifier="//@dscs.0">
+    <impl id="eu001"
+        body=""/>
+  </procedures>
+  <events id="ev001"
+      name="Event1"/>
+  <entities
+      name="PlantElem"/>
+  <entities
+      name="Device"/>
+  <entities
+      name="LoadDevice"/>
+  <entities
+      name="StorageDevice"/>
+  <entities
+      name="Source"/>
+  <entities
+      name="SmartMeter"/>
+  <entities
+      name="Meter"/>
+  <entities
+      name="LegacyMeter"/>
+  <entities
+      name="MGController"/>
+  <entities
+      name="AtomicController"/>
+  <entities
+      name="MGridController"/>
+  <entities
+      name="LoadController"/>
+  <entities
+      name="StorageController"/>
+  <entities
+      name="SourceController"/>
+  <entities
+      name="PCC"/>
+</dsk:Dsk>

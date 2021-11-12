@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="adapter2" nsURI="http://www.inf.ufg.br/broker/adapter2" nsPrefix="adapter2">
+  <eClassifiers xsi:type="ecore:EClass" name="Adapter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="platform" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="domain" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mapper" eType="#//Mapper"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dispatcher" upperBound="-1"
+        eType="#//Dispatcher" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainElements" eType="#//domain/DomainElements"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="platformElements" eType="#//platform/PlatformElements"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mapper">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentsRelated" upperBound="-1"
+        eType="#//Components" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="function" upperBound="-1"
+        eType="#//Function" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Function">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="body" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Dispatcher">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comm" upperBound="-1" eType="#//platform/PSComm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cmd" upperBound="-1" eType="#//platform/PSCmd"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="function" eType="#//Function"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Components">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" lowerBound="1"
+        eType="#//platform/PSResource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" lowerBound="1"
+        eType="#//domain/DSEntity"/>
+  </eClassifiers>
+  <eSubpackages name="platform" nsURI="http://www.inf.ufg.br/broker/adapter/platform"
+      nsPrefix="platform">
+    <eClassifiers xsi:type="ecore:EClass" name="PlatformElements">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="resources" upperBound="-1"
+          eType="#//platform/PSResource" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="comm" upperBound="-1"
+          eType="#//platform/PSComm" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="cmd" upperBound="-1"
+          eType="#//platform/PSCmd" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="comp" upperBound="-1"
+          eType="#//platform/PSComponent" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PSComm" eSuperTypes="http://www.inf.ufg.br/broker/psk#//Communication">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="target" eType="ecore:EClass http://www.inf.ufg.br/broker/psk#//Component"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="PSCmd" eSuperTypes="http://www.inf.ufg.br/broker/psk#//Command"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PSResource" eSuperTypes="http://www.inf.ufg.br/broker/psk#//Resource"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PSComponent" eSuperTypes="http://www.inf.ufg.br/broker/psk#//Component"/>
+  </eSubpackages>
+  <eSubpackages name="domain" nsURI="http://www.inf.ufg.br/broker/adapter/domain"
+      nsPrefix="domain">
+    <eClassifiers xsi:type="ecore:EClass" name="DSEntity" eSuperTypes="http://www.inf.ufg.br/controller/dsk/common#//EDSEntity"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DomainElements">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+          eType="#//domain/DSEntity" containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

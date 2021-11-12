@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dsk:Dsk xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:dsk="http://www.inf.ufg.br/controller/dsk"
+    domain="testing2">
+  <dscs name="startDevice"
+      kind="OPER"/>
+  <dscs name="stopDevice"
+      kind="OPER"/>
+  <dscs name="testDevice"
+      kind="OPER"/>
+  <dscs name="verifyStatus"
+      kind="OPER"/>
+  <dscs name="setWaitMode"
+      kind="OPER"/>
+  <procedures
+      name="StartDeviceBasic"
+      classifier="//@dscs.0"/>
+  <procedures
+      id=""
+      name="StopDeviceBasic"
+      classifier="//@dscs.1"/>
+  <procedures
+      name="VerifyStatusBasic"
+      classifier="//@dscs.3"/>
+  <procedures
+      name="StopDeviceSec"
+      classifier="//@dscs.1"
+      dependencies="//@dscs.3"/>
+</dsk:Dsk>

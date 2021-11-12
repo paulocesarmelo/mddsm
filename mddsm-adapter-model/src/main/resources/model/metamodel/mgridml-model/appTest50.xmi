@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mgridml:MGridSchema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mgridml="http://www.inf.ufg.br/m4md/mgridml" mgridModelID="mgrid1">
+  <cs xsi:type="mgridml:MGridControlSchema">
+    <actor xsi:type="mgridml:LoadController" controllerID="lc1" name="LoadController1" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc2" name="LoadController2" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc3" name="LoadController3" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc4" name="LoadController4" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc5" name="LoadController5" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc6" name="LoadController6" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc7" name="LoadController7" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc8" name="LoadController8" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc9" name="LoadController9" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc10" name="LoadController10" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc11" name="LoadController11" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc12" name="LoadController12" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc13" name="LoadController13" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc14" name="LoadController14" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc15" name="LoadController15" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc16" name="LoadController16" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc17" name="LoadController17" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc18" name="LoadController18" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc19" name="LoadController19" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc20" name="LoadController20" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc21" name="LoadController21" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc22" name="LoadController22" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc23" name="LoadController23" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc24" name="LoadController24" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc25" name="LoadController25" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc26" name="LoadController26" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc27" name="LoadController27" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc28" name="LoadController28" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc29" name="LoadController29" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc30" name="LoadController30" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc31" name="LoadController31" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc32" name="LoadController32" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc33" name="LoadController33" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc34" name="LoadController34" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc35" name="LoadController35" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc36" name="LoadController36" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc37" name="LoadController37" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc38" name="LoadController38" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc39" name="LoadController39" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc40" name="LoadController40" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc41" name="LoadController41" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc42" name="LoadController42" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc43" name="LoadController43" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc44" name="LoadController44" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc45" name="LoadController45" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc46" name="LoadController46" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc47" name="LoadController47" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc48" name="LoadController48" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc49" name="LoadController49" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc50" name="LoadController50" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+  </cs>
+</mgridml:MGridSchema>

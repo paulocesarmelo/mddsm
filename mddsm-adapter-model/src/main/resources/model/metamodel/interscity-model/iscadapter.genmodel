@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/mddsm-adapter-model/src" modelPluginID="mddsm-adapter-model"
+    modelName="Iscadapter" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    usedGenPackages="../../../../../../../mddsm-controller-model/src/main/resources/model/metamodel/dsk.genmodel#//dsk ../../../../../../../mddsm-synthesis-model/src/main/resources/model/m4md.genmodel#//m4md"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>iscadapter.ecore</foreignModel>
+  <genPackages prefix="Iscadapter" disposableProviderFactory="true" ecorePackage="iscadapter.ecore#/">
+    <genClasses ecoreClass="iscadapter.ecore#//InterScityAdapter"/>
+    <genClasses ecoreClass="iscadapter.ecore#//ISCComm"/>
+    <genClasses ecoreClass="iscadapter.ecore#//ISCResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//ISCResource/uri"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//ISCResource/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//ISCResource/arrange"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//ISCResource/composition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iscadapter.ecore#//ISCResource/properties"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EReference iscadapter.ecore#//ISCResource/capabilities"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//ISCResource/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//ISCResource/lat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//ISCResource/long"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference iscadapter.ecore#//ISCResource/DSEntity"/>
+    </genClasses>
+    <nestedGenPackages prefix="Components" basePackage="iscadapter" disposableProviderFactory="true"
+        ecorePackage="iscadapter.ecore#//components">
+      <genClasses ecoreClass="iscadapter.ecore#//components/ResourceDiscovery">
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//components/ResourceDiscovery/route"/>
+      </genClasses>
+      <genClasses ecoreClass="iscadapter.ecore#//components/DataCollector">
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//components/DataCollector/route"/>
+      </genClasses>
+      <genClasses ecoreClass="iscadapter.ecore#//components/ActuatorController">
+        <genFeatures property="Readonly" createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//components/ActuatorController/route"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Resources" basePackage="iscadapter" disposableProviderFactory="true"
+        ecorePackage="iscadapter.ecore#//resources">
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="iscadapter.ecore#//resources/CompositionType">
+        <genEnumLiterals ecoreEnumLiteral="iscadapter.ecore#//resources/CompositionType/SINGLE"/>
+        <genEnumLiterals ecoreEnumLiteral="iscadapter.ecore#//resources/CompositionType/COMPOSITE"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="iscadapter.ecore#//resources/ArrangementType">
+        <genEnumLiterals ecoreEnumLiteral="iscadapter.ecore#//resources/ArrangementType/PHISICAL"/>
+        <genEnumLiterals ecoreEnumLiteral="iscadapter.ecore#//resources/ArrangementType/LOGICAL"/>
+      </genEnums>
+      <genEnums typeSafeEnumCompatible="false" ecoreEnum="iscadapter.ecore#//resources/ResourceType">
+        <genEnumLiterals ecoreEnumLiteral="iscadapter.ecore#//resources/ResourceType/SENSOR"/>
+        <genEnumLiterals ecoreEnumLiteral="iscadapter.ecore#//resources/ResourceType/ACTUATOR"/>
+      </genEnums>
+      <genClasses ecoreClass="iscadapter.ecore#//resources/CompositeResource">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iscadapter.ecore#//resources/CompositeResource/resource"/>
+      </genClasses>
+      <genClasses ecoreClass="iscadapter.ecore#//resources/Sensor"/>
+      <genClasses ecoreClass="iscadapter.ecore#//resources/Actuator"/>
+      <genClasses ecoreClass="iscadapter.ecore#//resources/ResourceProperty">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//resources/ResourceProperty/attr"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//resources/ResourceProperty/value"/>
+      </genClasses>
+      <genClasses ecoreClass="iscadapter.ecore#//resources/Capability">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//resources/Capability/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//resources/Capability/description"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//resources/Capability/function"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//resources/Capability/value"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference iscadapter.ecore#//resources/Capability/dsc"/>
+      </genClasses>
+      <genClasses ecoreClass="iscadapter.ecore#//resources/Location">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//resources/Location/lat"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute iscadapter.ecore#//resources/Location/long"/>
+      </genClasses>
+    </nestedGenPackages>
+  </genPackages>
+  <genPackages prefix="Adapter" disposableProviderFactory="true" ecorePackage="adapter.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="adapter.ecore#//ECommAPI">
+      <genEnumLiterals ecoreEnumLiteral="adapter.ecore#//ECommAPI/REST"/>
+      <genEnumLiterals ecoreEnumLiteral="adapter.ecore#//ECommAPI/GRAPHQL"/>
+      <genEnumLiterals ecoreEnumLiteral="adapter.ecore#//ECommAPI/GRPC"/>
+      <genEnumLiterals ecoreEnumLiteral="adapter.ecore#//ECommAPI/WEBHOOKS"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="adapter.ecore#//EDataFormat">
+      <genEnumLiterals ecoreEnumLiteral="adapter.ecore#//EDataFormat/JSON"/>
+      <genEnumLiterals ecoreEnumLiteral="adapter.ecore#//EDataFormat/XML"/>
+      <genEnumLiterals ecoreEnumLiteral="adapter.ecore#//EDataFormat/TXT"/>
+      <genEnumLiterals ecoreEnumLiteral="adapter.ecore#//EDataFormat/XDR"/>
+    </genEnums>
+    <genClasses ecoreClass="adapter.ecore#//EAdapter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute adapter.ecore#//EAdapter/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference adapter.ecore#//EAdapter/comm"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference adapter.ecore#//EAdapter/resources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference adapter.ecore#//EAdapter/components"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference adapter.ecore#//EAdapter/dscs"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference adapter.ecore#//EAdapter/entity"/>
+    </genClasses>
+    <genClasses ecoreClass="adapter.ecore#//ECommunication">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute adapter.ecore#//ECommunication/api"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference adapter.ecore#//ECommunication/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute adapter.ecore#//ECommunication/dataSupported"/>
+    </genClasses>
+    <genClasses ecoreClass="adapter.ecore#//EResource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute adapter.ecore#//EResource/name"/>
+    </genClasses>
+    <genClasses ecoreClass="adapter.ecore#//EComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute adapter.ecore#//EComponent/name"/>
+    </genClasses>
+    <genClasses ecoreClass="adapter.ecore#//EData"/>
+    <genClasses ecoreClass="adapter.ecore#//EEntity"/>
+    <genClasses ecoreClass="adapter.ecore#//EDSCmd"/>
+  </genPackages>
+</genmodel:GenModel>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="adapter-old" nsURI="http://www.inf.ufg.br/adapter-old" nsPrefix="adapter-old">
+  <eClassifiers xsi:type="ecore:EClass" name="EAdapter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="comm" lowerBound="1" upperBound="-1"
+        eType="#//ECommunication" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resources" lowerBound="1"
+        upperBound="-1" eType="#//EResource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//EComponent" transient="true" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dscs" upperBound="-1" eType="#//EDSCmd"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entity" upperBound="-1"
+        eType="#//EEntity" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ECommunication">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="api" eType="#//ECommAPI"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" upperBound="-1"
+        eType="#//EComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSupported" eType="#//EDataFormat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EResource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EComponent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EData"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EEntity" eSuperTypes="../../../../../../../mddsm-controller-model/src/main/resources/model/metamodel/dsk.ecore#//EDSEntity"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ECommAPI">
+    <eLiterals name="REST"/>
+    <eLiterals name="GRAPHQL" value="1"/>
+    <eLiterals name="GRPC" value="2"/>
+    <eLiterals name="WEBHOOKS" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EDataFormat">
+    <eLiterals name="JSON"/>
+    <eLiterals name="XML" value="1"/>
+    <eLiterals name="TXT" value="3"/>
+    <eLiterals name="XDR" value="4"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EDSCmd" eSuperTypes="../../../../../../../mddsm-controller-model/src/main/resources/model/metamodel/dsk.ecore#//EDSC"/>
+</ecore:EPackage>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ASCII"?>
+<nml:NMLSchema
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:nml="www.inf.ufg.br/m4md/nml">
+  <cs xsi:type="nml:NMLControlSchema">
+    <actor xsi:type="nml:ActorX"
+        typeX="//@cs/@actor.0/@typesControlled.0"
+        name="name">
+      <typesControlled
+          xsi:type="nml:XType"/>
+    </actor>
+  </cs>
+  <ds xsi:type="nml:NMLDataSchema">
+    <item xsi:type="nml:ItemX"
+        arisingBehavior="DYNAMIC"
+        type="//@cs/@actor.0/@typesControlled.0"/>
+  </ds>
+</nml:NMLSchema>

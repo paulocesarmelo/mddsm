@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testing:Sandbox xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:testing="http://www.inf.ufg.br/metalang4md/testing">
+	<elements xsi:type="testing:ClassActor" attrInt="3"
+		attrString="actor1">
+		<cmd2>
+			<cmd>STOP</cmd>
+			<cmd>REMOVE</cmd>
+		</cmd2>
+	</elements>
+	<elements xsi:type="testing:ClassItem" attrInt="5"
+		attrString="item1">
+		<byComposition xsi:type="testing:ClassCommand">
+			<cmd>REMOVE</cmd>
+		</byComposition>
+	</elements>
+	<elements xsi:type="testing:ClassType" binding="//@elements.2"
+		attrString="type1" />
+	<elements attrString="base1" />
+</testing:Sandbox>

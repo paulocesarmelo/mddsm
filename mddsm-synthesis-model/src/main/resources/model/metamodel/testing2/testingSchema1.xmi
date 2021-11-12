@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testing2:TestingSchema xmi:version="2.0"
+	xmlns:xmi="http://www.omg.org/XMI"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:testing2="http://www.inf.ufg.br/m4md/testing2" id="1">
+	<cs xsi:type="testing2:TestingCS">
+		<actor xsi:type="testing2:ClassActor" commandPriority="1"
+			name="actor1">
+			<cmd xsi:type="testing2:ClassCommand" cmdId="1">
+				<cmd>startDevice</cmd>
+			</cmd>
+			<typesControlled xsi:type="testing2:ClassType"
+				interactionBehavior="ASYNC" typeName="type1" />
+		</actor>
+		<actor xsi:type="testing2:ClassActor" name="actor2">
+			<typesControlled xsi:type="testing2:ClassType"
+				interactionBehavior="ASYNC" typeName="type2" />
+		</actor>
+	</cs>
+	<ds xsi:type="testing2:TestingDS" cs="//@cs">
+		<item xsi:type="testing2:ClassItem" commandPriority="2"
+			arisingBehavior="DYNAMIC" type="//@cs/@actor.0/@typesControlled.0"
+			name="item1">
+		</item>
+		<item xsi:type="testing2:ClassItem" arisingBehavior="DYNAMIC"
+			type="//@cs/@actor.1/@typesControlled.0" name="item2" />
+	</ds>
+</testing2:TestingSchema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dsk:Dsk xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:dsk="http://www.inf.ufg.br/controller/dsk"
+    domain="testing2">
+  <dscs name="AddItem"
+      kind="OPER"
+      entity="//@entities.0"
+      condition="//@events.1"/>
+  <dscs name="AddActor"
+      kind="OPER"
+      entity="//@entities.1"
+      condition="//@events.0"/>
+  <events id="1"
+      name="ActorAdded"/>
+  <events id="2"
+      name="ItemAdded"/>
+  <entities
+      name="ClassItem"/>
+  <entities
+      name="ClassActor"/>
+</dsk:Dsk>

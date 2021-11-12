@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ASCII"?>
+<adapterV2:Adapter
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:adapterV2="http://www.inf.ufg.br/broker/adapterV2"
+    platform="InterSCity"
+    domain="Street Lighting">
+  <mapper>
+    <componentsRelated
+        id="1"
+        resource="//@platformElements/@resources.0"
+        entity="//@domainElements/@entities.0"/>
+    <function/>
+  </mapper>
+  <domainElements>
+    <entities
+        name="SmartLight"/>
+  </domainElements>
+  <platformElements>
+    <resources
+        name="lamp"/>
+    <comm/>
+  </platformElements>
+</adapterV2:Adapter>

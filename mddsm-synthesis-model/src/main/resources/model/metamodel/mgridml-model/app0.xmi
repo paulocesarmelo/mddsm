@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mgridml:MGridSchema
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:mgridml="http://www.inf.ufg.br/m4md/mgridml"
+    mgridModelID="mgrid1"/>

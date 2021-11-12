@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mgridml:MGridSchema
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mgridml="http://www.inf.ufg.br/m4md/mgridml"
+    mgridModelID="mgrid1">
+  <cs xsi:type="mgridml:MGridControlSchema">
+    <actor xsi:type="mgridml:LoadController"
+        controllerID="lc001"
+        name="ControllerSeasonal"
+        description="Seasonal Devices"
+        critical="ANY"
+        lowerWattage="110.0"
+        upperWattage="120.0">
+      <typesControlled
+          xsi:type="mgridml:LoadDeviceType"
+          soTypeID="ldt001"
+          typeName="SeasonalDevice"/>
+      <typesControlled
+          xsi:type="mgridml:LoadDeviceType"
+          soTypeID="ldt002"
+          typeName="SeasonalDevice"/>
+    </actor>
+    <actor xsi:type="mgridml:LoadController"
+        controllerID="lc001"
+        name="ControllerSeasonal"
+        description="Seasonal Devices"
+        critical="ANY"
+        lowerWattage="110.0"
+        upperWattage="120.0">
+      <typesControlled
+          xsi:type="mgridml:LoadDeviceType"
+          soTypeID="ldt001"
+          typeName="SeasonalDevice"/>
+      <typesControlled
+          xsi:type="mgridml:LoadDeviceType"
+          soTypeID="ldt002"
+          typeName="SeasonalDevice"/>
+    </actor>
+  </cs>
+  <ds xsi:type="mgridml:MGridDataSchema"
+      cs="//@cs">
+    <item xsi:type="mgridml:LoadDevice"
+        type="//@cs/@actor.0/@typesControlled.0"
+        plantE_ID="ld001"
+        deviceName="Heater"
+        wattage="120.0">
+      <deviceProperty
+          attribute="temp"
+          value="75"/>
+    </item>
+    <item xsi:type="mgridml:LoadDevice"
+        type="//@cs/@actor.0/@typesControlled.0"
+        plantE_ID="ld001"
+        deviceName="Heater"
+        wattage="120.0">
+      <deviceProperty
+          attribute="temp"
+          value="75"/>
+    </item>
+  </ds>
+</mgridml:MGridSchema>

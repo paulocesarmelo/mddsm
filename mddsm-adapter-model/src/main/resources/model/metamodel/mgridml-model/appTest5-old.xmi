@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<mgridml:MGridSchema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mgridml="http://www.inf.ufg.br/m4md/mgridml" mgridModelID="mgrid1">
+  <cs xsi:type="mgridml:MGridControlSchema">
+    <actor xsi:type="mgridml:LoadController" controllerID="lc1" name="LoadController1" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc2" name="LoadController2" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc3" name="LoadController3" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc4" name="LoadController4" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+    <actor xsi:type="mgridml:LoadController" controllerID="lc5" name="LoadController5" description="Load Controller fot Test" critical="ANY" lowerWattage="110.0" upperWattage="220.0"/>
+  </cs>
+</mgridml:MGridSchema>

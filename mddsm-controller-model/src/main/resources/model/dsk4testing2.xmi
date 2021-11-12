@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dsk:Dsk xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:dsk="http://www.inf.ufg.br/controller/dsk"
+    domain="testing2">
+  <dscs name="CreateClassActor"
+      kind="OPER"
+      entity="//@entities.1"
+      condition="//@events.0"/>
+  <dscs name="DeleteClassActor"
+      kind="OPER"
+      entity="//@entities.1"
+      condition="//@events.1"/>
+  <dscs name="CreateClassItem"
+      kind="OPER"
+      entity="//@entities.0"
+      condition="//@events.2"/>
+  <dscs name="RemoveClassItem"
+      kind="OPER"
+      entity="//@entities.0"
+      condition="//@events.3"/>
+  <procedures
+      name="CreateClassActorSimple"
+      classifier="//@dscs.0"/>
+  <events id="1"
+      name="classActorAdded"
+      metaCmd="ADD"/>
+  <events id="2"
+      name="classActorDeleted"
+      metaCmd="DELETE"/>
+  <events id="1"
+      name="classItemAdded"
+      metaCmd="ADD"/>
+  <events id="1"
+      name="itemDisabled"
+      type="BOTTOM"/>
+  <entities
+      name="ClassItem"/>
+  <entities
+      name="ClassActor"/>
+</dsk:Dsk>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dsk:Dsk xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dsk="http://www.inf.ufg.br/controller/dsk" domain="MGRIDML">
+  <entities name="PlantElem"/>
+  <entities name="MGController"/>
+</dsk:Dsk>

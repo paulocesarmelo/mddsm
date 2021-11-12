@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ASCII"?>
+<dsk2:Dsk xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:dsk2="http://www.inf.ufg.br/controller/dsk2">
+  <dscs name="AddActor"
+      entity="//@entities.0"
+      condition="//@events.0"/>
+  <events id="1"
+      name="ActorAdded"/>
+  <entities
+      name="ClassActor"/>
+</dsk2:Dsk>

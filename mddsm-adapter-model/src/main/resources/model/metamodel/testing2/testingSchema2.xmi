@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testing2:TestingSchema
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:testing2="http://www.inf.ufg.br/m4md/testing2">
+  <cs xsi:type="testing2:TestingCS">
+    <actor xsi:type="testing2:ClassActor"
+        name="actor1"/>
+  </cs>
+  <ds xsi:type="testing2:TestingDS">
+    <item xsi:type="testing2:ClassItem"
+        arisingBehavior="DYNAMIC"
+        name="item1"/>
+  </ds>
+</testing2:TestingSchema>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="adapter-old" nsURI="http://www.inf.ufg.br/broker/adapter-old"
+    nsPrefix="adapter-old">
+  <eClassifiers xsi:type="ecore:EClass" name="Adapter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="platform" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
+        upperBound="2" eType="#//Interface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="resource" upperBound="-1"
+        eType="#//Resource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entities" upperBound="-1"
+        eType="#//domain-specific/DSEntity" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dscs" upperBound="-1" eType="#//domain-specific/DSC"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="api" eType="#//CommAPIEnum"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="target" upperBound="-1"
+        eType="#//platform/Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataSupported" eType="#//DataFormatEnum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Resource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uuid" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" lowerBound="1"
+        upperBound="-1" eType="#//Parameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entityRelated" lowerBound="1"
+        eType="#//domain-specific/DSEntity"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Actuator" eSuperTypes="#//Resource"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="attribute" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composed" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dsc" upperBound="-1" eType="#//domain-specific/DSC"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="CommAPIEnum">
+    <eLiterals name="REST"/>
+    <eLiterals name="GRAPHQL" value="1"/>
+    <eLiterals name="GRPC" value="2"/>
+    <eLiterals name="WEBHOOKS" value="3"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DataFormatEnum">
+    <eLiterals name="JSON"/>
+    <eLiterals name="XML" value="1"/>
+    <eLiterals name="TXT" value="2"/>
+    <eLiterals name="XDR" value="3"/>
+  </eClassifiers>
+  <eSubpackages name="platform" nsURI="http://www.inf.ufg.br/broker/adapter/platform"
+      nsPrefix="platform">
+    <eClassifiers xsi:type="ecore:EClass" name="Component">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="domain-specific" nsURI="http://www.inf.ufg.br/broker/adapter/domain"
+      nsPrefix="domain">
+    <eClassifiers xsi:type="ecore:EClass" name="DSC" eSuperTypes="../../../../../mddsm-controller-model/src/main/resources/model/metamodel/dsk.ecore#//EDSC"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DSEntity" eSuperTypes="../../../../../mddsm-controller-model/src/main/resources/model/metamodel/dsk.ecore#//EDSEntity"/>
+  </eSubpackages>
+</ecore:EPackage>
